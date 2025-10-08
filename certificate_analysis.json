@@ -1,0 +1,249 @@
+{
+  "certificate_map": {
+    "arn:aws:acm:us-east-1:123456789012:certificate/11111111-1111-1111-1111-111111111111": {
+      "arn": "arn:aws:acm:us-east-1:123456789012:certificate/11111111-1111-1111-1111-111111111111",
+      "domain_name": "example.com",
+      "subject_alternative_names": [
+        "www.example.com",
+        "api.example.com"
+      ],
+      "status": "ISSUED",
+      "type": "AMAZON_ISSUED",
+      "key_algorithm": "RSA_2048",
+      "signature_algorithm": "SHA256WITHRSA",
+      "issued_at": "2024-12-07 17:42:28.477769",
+      "not_before": "2024-12-07 17:42:28.477776",
+      "not_after": "2025-12-07 17:42:28.477777",
+      "renewal_eligibility": "ELIGIBLE",
+      "in_use": true,
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        },
+        {
+          "Key": "Project",
+          "Value": "MainWebsite"
+        }
+      ],
+      "expiration_status": "valid",
+      "days_until_expiry": 64
+    },
+    "arn:aws:acm:us-east-1:123456789012:certificate/22222222-2222-2222-2222-222222222222": {
+      "arn": "arn:aws:acm:us-east-1:123456789012:certificate/22222222-2222-2222-2222-222222222222",
+      "domain_name": "test.example.com",
+      "subject_alternative_names": [
+        "staging.test.example.com"
+      ],
+      "status": "ISSUED",
+      "type": "AMAZON_ISSUED",
+      "key_algorithm": "RSA_2048",
+      "signature_algorithm": "SHA256WITHRSA",
+      "issued_at": "2025-03-17 17:42:28.477779",
+      "not_before": "2025-03-17 17:42:28.477780",
+      "not_after": "2025-10-18 17:42:28.477781",
+      "renewal_eligibility": "ELIGIBLE",
+      "in_use": true,
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Staging"
+        },
+        {
+          "Key": "Project",
+          "Value": "TestApp"
+        }
+      ],
+      "expiration_status": "approaching",
+      "days_until_expiry": 14
+    },
+    "arn:aws:acm:us-east-1:123456789012:certificate/33333333-3333-3333-3333-333333333333": {
+      "arn": "arn:aws:acm:us-east-1:123456789012:certificate/33333333-3333-3333-3333-333333333333",
+      "domain_name": "old.example.com",
+      "subject_alternative_names": [
+        "legacy.old.example.com"
+      ],
+      "status": "ISSUED",
+      "type": "AMAZON_ISSUED",
+      "key_algorithm": "RSA_2048",
+      "signature_algorithm": "SHA256WITHRSA",
+      "issued_at": "2024-08-29 17:42:28.477782",
+      "not_before": "2024-08-29 17:42:28.477783",
+      "not_after": "2025-09-28 17:42:28.477783",
+      "renewal_eligibility": "ELIGIBLE",
+      "in_use": false,
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Legacy"
+        },
+        {
+          "Key": "Project",
+          "Value": "OldSystem"
+        }
+      ],
+      "expiration_status": "expired",
+      "days_until_expiry": -6
+    },
+    "arn:aws:acm:us-east-1:123456789012:certificate/44444444-4444-4444-4444-444444444444": {
+      "arn": "arn:aws:acm:us-east-1:123456789012:certificate/44444444-4444-4444-4444-444444444444",
+      "domain_name": "secure.example.com",
+      "subject_alternative_names": [
+        "admin.secure.example.com",
+        "portal.secure.example.com"
+      ],
+      "status": "ISSUED",
+      "type": "AMAZON_ISSUED",
+      "key_algorithm": "RSA_4096",
+      "signature_algorithm": "SHA256WITHRSA",
+      "issued_at": "2025-08-14 17:42:28.477784",
+      "not_before": "2025-08-14 17:42:28.477787",
+      "not_after": "2026-08-14 17:42:28.477787",
+      "renewal_eligibility": "ELIGIBLE",
+      "in_use": true,
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Production"
+        },
+        {
+          "Key": "Project",
+          "Value": "SecurePortal"
+        },
+        {
+          "Key": "Security",
+          "Value": "High"
+        }
+      ],
+      "expiration_status": "valid",
+      "days_until_expiry": 314
+    },
+    "arn:aws:acm:us-east-1:123456789012:certificate/55555555-5555-5555-5555-555555555555": {
+      "arn": "arn:aws:acm:us-east-1:123456789012:certificate/55555555-5555-5555-5555-555555555555",
+      "domain_name": "api.example.com",
+      "subject_alternative_names": [
+        "v1.api.example.com",
+        "v2.api.example.com"
+      ],
+      "status": "PENDING_VALIDATION",
+      "type": "AMAZON_ISSUED",
+      "key_algorithm": "RSA_2048",
+      "signature_algorithm": "SHA256WITHRSA",
+      "issued_at": null,
+      "not_before": null,
+      "not_after": null,
+      "renewal_eligibility": "INELIGIBLE",
+      "in_use": false,
+      "tags": [
+        {
+          "Key": "Environment",
+          "Value": "Development"
+        },
+        {
+          "Key": "Project",
+          "Value": "NewAPI"
+        }
+      ],
+      "expiration_status": "unknown",
+      "days_until_expiry": null
+    }
+  },
+  "table_data": [
+    {
+      "Certificate ARN": "arn:aws:acm:us-east-1:123456789012:certificate/11111111-1111-1111-1111-111111111111",
+      "Domain Name": "example.com",
+      "Subject Alternative Names": "www.example.com, api.example.com",
+      "Status": "ISSUED",
+      "Type": "AMAZON_ISSUED",
+      "Key Algorithm": "RSA_2048",
+      "Signature Algorithm": "SHA256WITHRSA",
+      "Issued At": "2024-12-07 17:42:28.477769",
+      "Not Before": "2024-12-07 17:42:28.477776",
+      "Not After": "2025-12-07 17:42:28.477777",
+      "Days Until Expiry": 64,
+      "Expiration Status": "valid",
+      "Renewal Eligibility": "ELIGIBLE",
+      "In Use": true,
+      "Tags": "Environment:Production, Project:MainWebsite"
+    },
+    {
+      "Certificate ARN": "arn:aws:acm:us-east-1:123456789012:certificate/22222222-2222-2222-2222-222222222222",
+      "Domain Name": "test.example.com",
+      "Subject Alternative Names": "staging.test.example.com",
+      "Status": "ISSUED",
+      "Type": "AMAZON_ISSUED",
+      "Key Algorithm": "RSA_2048",
+      "Signature Algorithm": "SHA256WITHRSA",
+      "Issued At": "2025-03-17 17:42:28.477779",
+      "Not Before": "2025-03-17 17:42:28.477780",
+      "Not After": "2025-10-18 17:42:28.477781",
+      "Days Until Expiry": 14,
+      "Expiration Status": "approaching",
+      "Renewal Eligibility": "ELIGIBLE",
+      "In Use": true,
+      "Tags": "Environment:Staging, Project:TestApp"
+    },
+    {
+      "Certificate ARN": "arn:aws:acm:us-east-1:123456789012:certificate/33333333-3333-3333-3333-333333333333",
+      "Domain Name": "old.example.com",
+      "Subject Alternative Names": "legacy.old.example.com",
+      "Status": "ISSUED",
+      "Type": "AMAZON_ISSUED",
+      "Key Algorithm": "RSA_2048",
+      "Signature Algorithm": "SHA256WITHRSA",
+      "Issued At": "2024-08-29 17:42:28.477782",
+      "Not Before": "2024-08-29 17:42:28.477783",
+      "Not After": "2025-09-28 17:42:28.477783",
+      "Days Until Expiry": -6,
+      "Expiration Status": "expired",
+      "Renewal Eligibility": "ELIGIBLE",
+      "In Use": false,
+      "Tags": "Environment:Legacy, Project:OldSystem"
+    },
+    {
+      "Certificate ARN": "arn:aws:acm:us-east-1:123456789012:certificate/44444444-4444-4444-4444-444444444444",
+      "Domain Name": "secure.example.com",
+      "Subject Alternative Names": "admin.secure.example.com, portal.secure.example.com",
+      "Status": "ISSUED",
+      "Type": "AMAZON_ISSUED",
+      "Key Algorithm": "RSA_4096",
+      "Signature Algorithm": "SHA256WITHRSA",
+      "Issued At": "2025-08-14 17:42:28.477784",
+      "Not Before": "2025-08-14 17:42:28.477787",
+      "Not After": "2026-08-14 17:42:28.477787",
+      "Days Until Expiry": 314,
+      "Expiration Status": "valid",
+      "Renewal Eligibility": "ELIGIBLE",
+      "In Use": true,
+      "Tags": "Environment:Production, Project:SecurePortal, Security:High"
+    },
+    {
+      "Certificate ARN": "arn:aws:acm:us-east-1:123456789012:certificate/55555555-5555-5555-5555-555555555555",
+      "Domain Name": "api.example.com",
+      "Subject Alternative Names": "v1.api.example.com, v2.api.example.com",
+      "Status": "PENDING_VALIDATION",
+      "Type": "AMAZON_ISSUED",
+      "Key Algorithm": "RSA_2048",
+      "Signature Algorithm": "SHA256WITHRSA",
+      "Issued At": null,
+      "Not Before": null,
+      "Not After": null,
+      "Days Until Expiry": null,
+      "Expiration Status": "unknown",
+      "Renewal Eligibility": "INELIGIBLE",
+      "In Use": false,
+      "Tags": "Environment:Development, Project:NewAPI"
+    }
+  ],
+  "summary": {
+    "total_certificates": 5,
+    "status_counts": {
+      "valid": 2,
+      "approaching": 1,
+      "expired": 1,
+      "unknown": 1
+    },
+    "expired_count": 1,
+    "approaching_count": 1
+  }
+}
