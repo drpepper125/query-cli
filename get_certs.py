@@ -279,11 +279,4 @@ def main():
 
 if __name__ == "__main__":
     result = main()
-    
-    # Optionally save to JSON file for dashboard consumption
-    if result:
-        with open('certificate_analysis.json', 'w') as f:
-            json.dump(result, f, indent=2, default=str)
-        logging.info("Results saved to certificate_analysis.json")
-
 

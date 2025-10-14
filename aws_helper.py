@@ -33,3 +33,20 @@ def create_mgmt_session(client, env,):
             raise ValueError(f"Invalid environment: {env}")
 
 
+def create_read_only_session(mgmt_session,account_id,role_name):
+    role_arn = f'arn:aws:iam::{account_id}:role/{role_name}'
+    sts_client = mgmt_session.client('sts')
+    read_only_creds = sts_client.assume_role(
+        RoleArn=role_arn,
+        RoleSessionName='read-only-session'
+    )
+    return boto3.Session(
+        aws_access_key_id=read_only_creds['Credentials']['AccessKeyId'],
+        aws_secret_access_key=read_only_creds['Credentials']['SecretAccessKey'],
+        aws_session_token=read_only_creds['Credentials']['SessionToken']
+    )
+
+
+def end_session(session):
+    session.close()
+    logging.info(f"Session closed for")
