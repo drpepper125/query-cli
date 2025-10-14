@@ -22,3 +22,8 @@ def get_ec2_instances(session: boto3.Session, region: str = 'us-east-1') -> List
     except Exception as e:
         print(f'Error getting Ec2 instances: {e}')
         return []
+
+if __name__ == "__main__":
+    session = aws_helper.create_mgmt_session(env, account_id)
+    ec2 = get_ec2.get_ec2_instances(session)
+    print(ec2)

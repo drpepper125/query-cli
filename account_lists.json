@@ -1,0 +1,17 @@
+{
+    "pro": {
+        "123456789012": "test-pro-admin",
+        "234567890123": "prod-admin-role",
+        "345678901234": "production-manager"
+    },
+    "pre": {
+        "456789012345": "test-pre-admin",
+        "567890123456": "staging-admin-role",
+        "678901234567": "preprod-manager"
+    },
+    "dev": {
+        "789012345678": "test-dev-admin",
+        "890123456789": "development-admin-role",
+        "901234567890": "dev-manager"
+    }
+}
