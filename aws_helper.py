@@ -19,7 +19,7 @@ def create_mgmt_session(client, env,):
                 aws_secret_access_key=pro_mgmt_session['Credentials']['SecretAccessKey'],
                 aws_session_token=pro_mgmt_session['Credentials']['SessionToken']
             )
-        case 'dev':
+        case 'dev','pre','poc':
             dev_mgmt_session = client.assume_role(
                 RoleArn=f'arn:aws:iam::{account_id}:role/{account_name}',
                 RoleSessionName='mgmt-session'
